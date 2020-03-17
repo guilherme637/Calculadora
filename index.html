@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Calculadora</title>
+    <style type="text/css">
+      body{
+        position: absolute;
+      }
+      .container{
+        
+        height: 500px;
+        top:15%;
+        left: 55%;
+        transform: translate(70%,15%);
+        width: 600px;
+        position: absolute;
+        background:#F5FBEF;
+      }
+
+      .container1{
+        
+        height: 100px;
+        margin: 20px;
+        
+      }
+     
+      .row{
+        
+        width: 250px;
+        top: 5%;
+        right: 25%;
+        transform: translate(130%,0%);
+        position: relative;
+        
+      }
+      
+      h3{
+        text-align: center;
+        margin: 50px;
+       
+      }
+      
+      p{
+        text-align: center;
+        color: rgba(63, 60, 60, 0.623);
+      }
+    .button{
+      
+      left: 50%;
+      width: 110px;
+      transform: translate(50%);
+      margin: 15px;
+    }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <div class="container1">
+          <h3><strong>CALCULADORA</strong></h3>
+          <p>Os valores aceitos por essa Calculadora são</p>
+          <p>+ (soma), - (subtração) , x (multiplicação) e / (divisão)</p>
+        </div>
+        <div class="row">
+          <form method="get" action="calculo.php">
+
+            <div class="col-xs-2">	
+              <label for="num"></label>
+              <input type="text" class="form-control" name="valor" required id="num" placeholder="Digite um valor"> 
+            </div>
+            <br>
+            <select name="op" class="form-control">
+                <option value=""></option>
+                <option value="1" >+</option>
+                <option value="2" >-</option>
+                <option value="3" >/</option>
+                <option value="4" >x</option>
+            </select>
+          
+            <div class="col-xs-2">
+              <label for="ex1"></label>	
+              <input type="text" class="form-control"name="valor2" required placeholder="Digite um valor">
+            </div>		
+            <div class="button">
+             <button type="submit" class="btn btn-primary mb-2 ">CALCULAR</button>
+            </div>  
+          </form>
+
+        </div>
+        
+        
+      </div>  
+  </body>
+</html>
