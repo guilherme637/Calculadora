@@ -1,102 +1,79 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<DOCTTPE html>
+    <html lang="pt-br">
+        <head>
 
-    <title>Calculadora</title>
-    <style type="text/css">
-      body{
-        position: absolute;
-      }
-      .container{
-        
-        height: 500px;
-        top:15%;
-        left: 55%;
-        transform: translate(70%,15%);
-        width: 600px;
-        position: absolute;
-        background:#F5FBEF;
-      }
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <title>Página Inicial</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="bootstrap-4.4.1//js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-      .container1{
-        
-        height: 100px;
-        margin: 20px;
-        
-      }
-     
-      .row{
-        
-        width: 250px;
-        top: 5%;
-        right: 25%;
-        transform: translate(130%,0%);
-        position: relative;
-        
-      }
-      
-      h3{
-        text-align: center;
-        margin: 50px;
-       
-      }
-      
-      p{
-        text-align: center;
-        color: rgba(63, 60, 60, 0.623);
-      }
-    .button{
-      
-      left: 50%;
-      width: 110px;
-      transform: translate(50%);
-      margin: 15px;
-    }
-    </style>
-  </head>
-  <body>
-      <div class="container">
-        <div class="container1">
-          <h3><strong>CALCULADORA</strong></h3>
-          <p>Os valores aceitos por essa Calculadora são</p>
-          <p>+ (soma), - (subtração) , x (multiplicação) e / (divisão)</p>
-        </div>
-        <div class="row">
-          <form method="get" action="calculo.php">
+           
+           
+           <style type="text/css">
+                body{
+                    background: #f3f1f1;
+                    position: relative;
+                }
+                .container{
+                    background: rgba(226, 202, 149, 0.467);
+                    margin: 40px;
+                    width: 350px;
+                    height: 350px;
+                    position:absolute;
+                    top: 35%;
+                    left: 40%;
+                    transform: translate(-35%, -40%);
+                    border: 1px solid black;
+                    ;
+                }
+               .filho{
+                   background: rgb(235, 247, 248);
+                   margin: 30px;
+                   border: 1px solid black;
+                }
 
-            <div class="col-xs-2">	
-              <label for="num"></label>
-              <input type="text" class="form-control" name="valor" required id="num" placeholder="Digite um valor"> 
-            </div>
-            <br>
-            <select name="op" class="form-control">
-                <option value=""></option>
-                <option value="1" >+</option>
-                <option value="2" >-</option>
-                <option value="3" >/</option>
-                <option value="4" >x</option>
-            </select>
+                .botao{
+                    color: rgba(170, 236, 197, 0.959);
+                    text-align: center;
+                }
+                h3{
+                    text-align: center;
+                    padding:5px;
+                }
+
+                
+            </style>
+        </head>
+        <body>
+            
+           <div class="container">
+                    <h3>Calcular o IMC</h3>
+                <form name="imc" method="get" action="calculo.php">
+
+                    <div class="form-group filho ">
+                        <label>Peso:</label>
+                        <input class="form-control form-control-sm" type="text" name="kg">
+                    </div>
+
+                    
+
+                    <div class="form-group filho">
+                        <label>Altura:</label>
+                        <input class="form-control" type="text" name="alt">
+                    </div>
+
+                    
+
+                    <div class="form-group botao ">
+                        <input type="submit" value="Calcular" >
+                    </div>
+
+                </form>
+           </div>
+
           
-            <div class="col-xs-2">
-              <label for="ex1"></label>	
-              <input type="text" class="form-control"name="valor2" required placeholder="Digite um valor">
-            </div>		
-            <div class="button">
-             <button type="submit" class="btn btn-primary mb-2 ">CALCULAR</button>
-            </div>  
-          </form>
-
-        </div>
-        
-        
-      </div>  
-  </body>
-</html>
+        </body>
+    </html>
